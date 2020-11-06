@@ -1,0 +1,52 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+#wrapper {
+    background: black;
+}
+/* -------Menu Header------- */
+
+#wp-menu-header {
+    
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+#menu-header {
+    /* background: var(--bg-header); */
+    background: white none repeat scroll 0 0;
+    border-bottom: 4px solid #589f46;
+    box-shadow: 0 -35px 73px black;
+}
+
+#main-nav {
+    
+}
+
+#main-nav ul li a {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4E4E50;
+    margin-right: 10px;
+}
+#main-nav ul li:hover a{
+    background: #00305b none repeat scroll 0 0;
+    color: white;
+    border-radius: 2rem;
+}
+
+/* ============================================CONTENT===================================== */
+#wp-content{
+    
+}
+#find_flight{
+    background: black;
+    height: 1000px;
+}
+#introduce_flight{
+    background: red;
+    height: 1000px;
+}
