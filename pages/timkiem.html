@@ -191,8 +191,265 @@
             </div>
 
         </div>
-        <div id="introduce_flight">
+        <link rel="stylesheet" href="../Asset/css/search-flights.css">
+        <script src="../Asset/js/search-flights.js"></script>
+        <div id="search-flights-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3" id="sidebar-left">
+                                <div class="filter-refresh">
+                                    <span class="text-bold"><i class="fas fa-filter"></i>Bộ lọc</span>
+                                    <span class="text-bold text-primary"><i class="fas fa-redo-alt"></i>Làm mới</span>
+                                </div>
+                                <div class="price-fliter">
+                                    <div class="price-header d-flex justify-content-between mb-3">
+                                        <b>Giá</b>
+                                        <span id="price-amount">0 đ - 5,000,000 đ</span>
+                                    </div>
+                                    <div id="slider-range-price" class="mb-3"></div>
+                                </div>
+                                <div class="btn mb-3 d-flex justify-content-between item-filter" data-toggle="collapse" data-target="#stop-point-qty" style="font-weight: bold;padding-left: 0;cursor: pointer;">
+                                    <span>Số điểm dừng</span><i class="fas fa-chevron-down rotate ml-2" style="margin-top:5px"></i>
+                                </div>
+                                <div id="stop-point-qty" class="collapse ">
+                                    <input type="checkbox" id="stop-point">
+                                    <label for="#stop-point" class="ml-3">Bay thẳng</label>
+                                </div>
+                                <div class="take-off-flight">
+                                    <p class="font-weight-bold">Cất cánh</p>
+                                    <div id="time-range-flight" class="d-flex justify-content-around">
+                                        <button class="time-range-flight">00:00 - 06:00</button>
+                                        <button class="time-range-flight">06:00 - 12:00</button>
+                                    </div>
+                                    <div id="time-range-flight" class="d-flex justify-content-around mt-2">
+                                        <button class="time-range-flight">12:00 - 18:00</button>
+                                        <button class="time-range-flight">18:00 - 24:00</button>
+                                    </div>
+                                </div>
+                                <div class="landing-flight mt-3">
+                                    <p class="font-weight-bold">Hạ cánh</p>
+                                    <div id="time-range-flight" class="d-flex justify-content-around">
+                                        <button class="time-range-flight">00:00 - 06:00</button>
+                                        <button class="time-range-flight">06:00 - 12:00</button>
+                                    </div>
+                                    <div id="time-range-flight" class="d-flex justify-content-around mt-2">
+                                        <button class="time-range-flight">12:00 - 18:00</button>
+                                        <button class="time-range-flight">18:00 - 24:00</button>
+                                    </div>
+                                </div>
+                                <div class="btn mb-3 d-flex justify-content-between item-filter mt-3" data-toggle="collapse" data-target="#time-to-flight" style="font-weight: bold;padding-left: 0;cursor: pointer;">
+                                    <span>Thời lượng</span><i class="fas fa-chevron-down rotate ml-2" style="margin-top:5px"></i>
+                                </div>
+                                <div id="time-to-flight" class="collapse ">
+                                    <div class="time-header d-flex justify-content-between mb-3">
+                                        <b>Chặng bay</b>
+                                        <span id="time-amount">0h - 5h</span>
+                                    </div>
+                                    <div id="slider-range-time" class="mb-3"></div>
+                                </div>
+                                <div class="btn mb-3 d-flex justify-content-between item-filter" data-toggle="collapse" data-target="#type-of-flight" style="font-weight: bold;padding-left: 0;cursor: pointer;">
+                                    <span>Hãng bay</span><i class="fas fa-chevron-down rotate ml-2" style="margin-top:5px"></i>
+                                </div>
+                                <div id="type-of-flight" class="collapse">
+                                    <input type="checkbox" id="type-vn-airline">
+                                    <label for="#type-vn-airline" class="ml-3">Vietnam Airlines</label>
+                                    <br>
+                                    <input type="checkbox" id="type-vn-bamboo">
+                                    <label for="#type-vn-bamboo" class="ml-3">Bamboo Airways</label>
+                                    <br>
+                                    <input type="checkbox" id="type-vn-pacific">
+                                    <label for="#type-vn-pacific" class="ml-3">Pacific Airlines</label>
+                                    <br>
+                                    <input type="checkbox" id="type-vn-vietjet">
+                                    <label for="#type-vn-vietjet" class="ml-3">Vietjet Air</label>
 
+                                </div>
+                            </div>
+                            <div class="col-md-9" id="content-search">
+                                <div class="info-result">
+                                    Nội bài - tân sơn nhất: 301 kết quả
+                                </div>
+                                <div class="date-info">
+                                    16/11/2020 - 19/11/2020 (1 khách)
+                                </div>
+                                <div class="filter-flights d-flex justify-content-between mt-4">
+                                    <div class="sort-flights ">
+                                        <span>Sắp xếp</span>
+                                        <select class="p-1">
+                                            <option value="0">Đề xuất</option>
+                                            <option value="1">Giá tăng dần</option>
+                                            <option value="2">Giá giảm dần</option>
+                                            <option value="3">Thời gian cất cánh</option>
+                                            <option value="4">Thời gian bay</option>
+                                        </select>
+                                    </div>
+                                    <div class="show-tax d-flex">
+                                        <p>Hiển thị giá gồm thuế và phí</p>
+                                        <div class="custom-control custom-switch ml-3">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                            <label class="custom-control-label" for="customSwitches"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-per-flight container mt-4 ">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-3 airline mt-3">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png" alt="" class="img-fluid">
+                                                    <p>Vietjet Air - VJ181</p>
+                                                </div>
+                                                <div class="col-md-6 d-flex" style="justify-content: space-between;margin-top: 16px;">
+                                                    <div class="time-per-depart">
+                                                        <p>13:40</p>
+                                                        <b>SGN</b>
+                                                    </div>
+                                                    <i class="fas fa-arrow-right mt-4"></i>
+                                                    <div class="time-per-return">
+                                                        <p>15:00</p>
+                                                        <b>DAD</b>
+                                                    </div>
+                                                    <div class="time-flights">
+                                                        <p><i class="far fa-clock"></i>1h 20m</p>
+                                                        <b><i class="far fa-clock"></i>Phổ thông</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mt-2 text-center">
+                                                    <b class="price-per-flights" style="font-size: 2rem;">59,000đ</b>
+                                                    <a href="" class="btn btn-danger w-100 mt-3">Chọn vé này</a>
+                                                </div>
+                                            </div>
+                                            <button class="btn mb-3 btn-info-flights" data-toggle="collapse" data-target="#information-of-flight-1" style="color: #807e7e;">
+                                                Thông tin chuyến bay<i class="fas fa-chevron-down rotate ml-2"></i>
+                                            </button>
+                                            <div id="information-of-flight-1" class="collapse information-of-flight">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row mt-3">
+                                                                <div class="col-md-3">
+                                                                    <span><b>Vietjet Air</b> - VJ620</span>
+                                                                    <p>Airbus A320-100/200</p>
+                                                                </div>
+                                                                <div class="col-md-5 pl-1">
+                                                                    <div class="row">
+                                                                        <div class="col-md-1">
+                                                                            <i class="fas fa-plane-departure"></i>
+                                                                            <div style="border-left: 1px solid rgb(136, 136, 136); height: 62%;margin-left:8px;"></div>
+                                                                            <i class="fas fa-plane-arrival"></i>
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <b>13:40</b>
+                                                                            <span class="fs-12">16/11/2020</span>
+                                                                            <b class="my-4 d-inline-block text-danger" style="font-size: 14px;"><i class="far fa-clock"></i>1h20m</b>
+                                                                            <b>15:00</b>
+                                                                            <span class="fs-12">16/11/2020</span>
+                                                                        </div>
+                                                                        <div class="col-md-8 ml-4">
+                                                                            <p class="mb-0"><b>Thành phố Hồ Chí Minh (SGN)</b></p>
+                                                                            <span class="fs-12">Tân Sơn Nhất</span>
+                                                                            <p class="mb-0" style="margin-top:66px;"><b>Đà Nẵng (DAD)</b></p>
+                                                                            <span class="fs-12">Đà Nẵng</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <p><i class="fas fa-suitcase-rolling mr-2"></i>Hành lý xách tay 7kg. Liên hệ với CSKH để biết thêm thông tin về hành lý ký gửi.</p>
+                                                                    <p><i class="fas fa-sync-alt mr-2"></i>Phí đổi vé 374.000VND và chênh lệch tiền vé (nếu có), thời hạn 3h so với giờ khởi hành.</p>
+                                                                    <p class="text-warning"><i class="fas fa-ban mr-2"></i>Không hoàn vé</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-per-flight container mt-4 ">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-3 airline mt-3">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png" alt="" class="img-fluid">
+                                                    <p>Vietjet Air - VJ182</p>
+                                                </div>
+                                                <div class="col-md-6 d-flex" style="justify-content: space-between;margin-top: 16px;">
+                                                    <div class="time-per-depart">
+                                                        <p>13:40</p>
+                                                        <b>SGN</b>
+                                                    </div>
+                                                    <i class="fas fa-arrow-right mt-4"></i>
+                                                    <div class="time-per-return">
+                                                        <p>15:00</p>
+                                                        <b>DAD</b>
+                                                    </div>
+                                                    <div class="time-flights">
+                                                        <p><i class="far fa-clock"></i>1h 20m</p>
+                                                        <b><i class="far fa-clock"></i>Phổ thông</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mt-2 text-center">
+                                                    <b class="price-per-flights" style="font-size: 2rem;">59,000đ</b>
+                                                    <a href="" class="btn btn-danger w-100 mt-3">Chọn vé này</a>
+                                                </div>
+                                            </div>
+                                            <button class="btn mb-3 btn-info-flights" data-toggle="collapse" data-target="#information-of-flight-2" style="color: #807e7e;">
+                                                Thông tin chuyến bay<i class="fas fa-chevron-down rotate ml-2"></i>
+                                            </button>
+                                            <div id="information-of-flight-2" class="collapse information-of-flight">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row mt-3">
+                                                                <div class="col-md-3">
+                                                                    <span><b>Vietjet Air</b> - VJ620</span>
+                                                                    <p>Airbus A320-100/200</p>
+                                                                </div>
+                                                                <div class="col-md-5 pl-1">
+                                                                    <div class="row">
+                                                                        <div class="col-md-1">
+                                                                            <i class="fas fa-plane-departure"></i>
+                                                                            <div style="border-left: 1px solid rgb(136, 136, 136); height: 62%;margin-left:8px;"></div>
+                                                                            <i class="fas fa-plane-arrival"></i>
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <b>13:40</b>
+                                                                            <span class="fs-12">16/11/2020</span>
+                                                                            <b class="my-4 d-inline-block text-danger" style="font-size: 14px;"><i class="far fa-clock"></i>1h20m</b>
+                                                                            <b>15:00</b>
+                                                                            <span class="fs-12">16/11/2020</span>
+                                                                        </div>
+                                                                        <div class="col-md-8 ml-4">
+                                                                            <p class="mb-0"><b>Thành phố Hồ Chí Minh (SGN)</b></p>
+                                                                            <span class="fs-12">Tân Sơn Nhất</span>
+                                                                            <p class="mb-0" style="margin-top:66px;"><b>Đà Nẵng (DAD)</b></p>
+                                                                            <span class="fs-12">Đà Nẵng</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <p><i class="fas fa-suitcase-rolling mr-2"></i>Hành lý xách tay 7kg. Liên hệ với CSKH để biết thêm thông tin về hành lý ký gửi.</p>
+                                                                    <p><i class="fas fa-sync-alt mr-2"></i>Phí đổi vé 374.000VND và chênh lệch tiền vé (nếu có), thời hạn 3h so với giờ khởi hành.</p>
+                                                                    <p class="text-warning"><i class="fas fa-ban mr-2"></i>Không hoàn vé</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- END CONTENT -->
