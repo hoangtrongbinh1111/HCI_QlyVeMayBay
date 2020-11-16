@@ -119,6 +119,10 @@ body {
     text-shadow: 5px 2px 5px rgb(255, 255, 255);
 }
 
+#icon-switch-flight {
+    cursor: pointer;
+}
+
 
 /* Flight Type */
 
@@ -362,10 +366,12 @@ img.ui-datepicker-trigger {
     min-height: 400px;
     background-color: #e1e1e1;
     padding: 5px;
-    position: relative;
+    position: absolute;
     top: -120px;
+    top: 544px;
     left: 444px;
     display: none;
+    z-index: 100;
 }
 
 #content-inland li:hover,

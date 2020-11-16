@@ -189,7 +189,224 @@
                     </div>
                 </div>
             </div>
+            <div class="sanbay">
+                <div class="tittle-airport d-flex justify-content-between">
+                    <p class="mb-0">Lựa chọn thành phố hoặc sân bay đi</p>
+                    <i class="fas fa-times" id="close-form-flight"></i>
+                </div>
+                <div class="content-airport mt-2">
+                    <ul class="nav nav-pills" id="tab-airport" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active " id="tab-inland" data-toggle="tab" href="#content-inland" role="tab" aria-controls="content-inland" aria-selected="true">
+                           Nội địa
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab-oversea" data-toggle="tab" href="#content-oversea" role="tab" aria-controls="content-oversea" aria-selected="false">
+                           Quốc tế
+                           </a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 100px;margin-top: 5px;">
+                            <input type="text" placeholder="Nhập tên thành phố hoặc sân bay" style="width:300px;" id="searchFlight">
 
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="tab-airport-content">
+                        <div class="tab-pane fade show active " id="content-inland" role="tabpanel" aria-labelledby="tab-inland">
+                            <div class="d-flex justify-content-between">
+                                <ul class="list-unstyled mr-3 ">
+                                    <h2 class="text-danger" style="font-size: 1.5rem;">Miền Bắc</h2>
+                                    <li class="aircode"><a code="HAN" typeflight="0" airportcode="8772,Hà Nội (HAN)"><b>Hà Nội </b><span>(HAN)</span></a></li>
+                                    <li class="aircode"><a code="HPH" typeflight="0" airportcode="8758,Hải Phòng (HPH)"><b>Hải Phòng </b><span>(HPH)</span></a></li>
+                                    <li class="aircode"><a code="DIN" typeflight="0" airportcode="8762,Điện Biên Phủ (DIN)"><b>Điện Biên </b><span>(DIN)</span></a></li>
+                                    <li class="aircode"><a code="VDO" typeflight="0" airportcode="8762,Vân Đồn (VDO)"><b>Vân Đồn </b><span>(VDO)</span></a></li>
+                                </ul>
+                                <ul class="list-unstyled mr-3 ">
+                                    <h2 class="text-danger" style="font-size: 1.5rem;">Miền Trung</h2>
+                                    <li class="aircode"><a code="THD" typeflight="0" airportcode="8906,Thanh Hóa (THD)"><b>Thanh Hóa </b><span>(THD)</span></a></li>
+                                    <li class="aircode"><a code="VII" typeflight="0" airportcode="8786,Vinh  (VII)"><b>Vinh  </b><span>(VII)</span></a></li>
+                                    <li class="aircode"><a code="DAD" typeflight="0" airportcode="8761,Đà Nẵng (DAD)"><b>Đà Nẵng </b><span>(DAD)</span></a></li>
+                                    <li class="aircode"><a code="HUI" typeflight="0" airportcode="8775,Huế (HUI)"><b>Huế </b><span>(HUI)</span></a></li>
+                                    <li class="aircode"><a code="VDH" typeflight="0" airportcode="8902,Đồng Hới (VDH)"><b>Đồng Hới </b><span>(VDH)</span></a></li>
+                                    <li class="aircode"><a code="TBB" typeflight="0" airportcode="8763,Tuy Hòa (TBB)"><b>Tuy Hòa </b><span>(TBB)</span></a></li>
+                                    <li class="aircode"><a code="VCL" typeflight="0" airportcode="8903,Chu Lai (VCL)"><b>Chu Lai </b><span>(VCL)</span></a></li>
+                                    <li class="aircode"><a code="PXU" typeflight="0" airportcode="8779,Pleiku (PXU)"><b>Pleiku </b><span>(PXU)</span></a></li>
+                                </ul>
+                                <ul class="list-unstyled ">
+                                    <h2 class="text-danger" style="font-size: 1.5rem;">Miền Nam</h2>
+                                    <li class="aircode"><a code="SGN" typeflight="0" airportcode="8785,Hồ Chí Minh (SGN)"><b>Hồ Chí Minh </b><span>(SGN)</span></a></li>
+                                    <li class="aircode"><a code="CXR" typeflight="0" airportcode="8769,Nha Trang (CXR)"><b>Nha Trang </b><span>(CXR)</span></a></li>
+                                    <li class="aircode"><a code="DLI" typeflight="0" airportcode="8766,Đà Lạt (DLI)"><b>Đà Lạt </b><span>(DLI)</span></a></li>
+                                    <li class="aircode"><a code="PQC" typeflight="0" airportcode="8764,Phú Quốc (PQC)"><b>Phú Quốc </b><span>(PQC)</span></a></li>
+                                    <li class="aircode"><a code="VCA" typeflight="0" airportcode="8756,Cần Thơ (VCA)"><b>Cần Thơ </b><span>(VCA)</span></a></li>
+                                    <li class="aircode"><a code="VCS" typeflight="0" airportcode="8760,Côn Đảo (VCS)"><b>Côn Đảo </b><span>(VCS)</span></a></li>
+                                    <li class="aircode"><a code="VKG" typeflight="0" airportcode="8782,Rạch Giá (VKG)"><b>Rạch Giá </b><span>(VKG)</span></a></li>
+                                    <li class="aircode"><a code="CAH" typeflight="0" airportcode="8755,Cà Mau (CAH)"><b>Cà Mau </b><span>(CAH)</span></a></li>
+                                    <li class="aircode"><a code="BMV" typeflight="0" airportcode="8777,Buôn Ma Thuột (BMV)"><b>Buôn Ma Thuột </b><span>(BMV)</span></a></li>
+                                    <li class="aircode"><a code="UIH" typeflight="0" airportcode="8781,Quy Nhơn (UIH)"><b>Quy Nhơn </b><span>(UIH)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="content-oversea" role="tabpanel" aria-labelledby="tab-oversea">
+                            <div class="d-flex justify-content-between">
+                                <ul class="list-unstyled">
+                                    <h2 class="title">Đông Nam Á</h2>
+                                    <li class="aircode" code="HAN" typeflight="0">
+                                        <a><img src="https://vietjetvn.com/image/flag/VN.png" width="22px" height="15px" align="absmiddle" alt="Hà Nội">&nbsp;<b>Hà Nội </b><span>&nbsp;(HAN)</span></a>
+                                    </li>
+                                    <li code="SGN" class="aircode" typeflight="0">
+                                        <a><img src="https://vietjetvn.com/image/flag/VN.png" width="22px" height="15px" align="absmiddle" alt="Hồ Chí Minh">&nbsp;<b>Hồ Chí Minh </b><span>&nbsp;(SGN)</span></a>
+                                    </li>
+                                    <li class="aircode" code="SIN" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/SG.png" width="22px" height="15px" align="absmiddle" alt="Singapore">&nbsp;<b>Singapore </b><span>&nbsp;(SIN)</span></a>
+                                    </li>
+                                    <li class="aircode" code="BKK" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/TH.png" width="22px" height="15px" align="absmiddle" alt="Bangkok">&nbsp;<b>Bangkok </b><span>&nbsp;(BKK)</span></a>
+                                    </li>
+                                    <li class="aircode" code="PNH" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/KH.png" width="22px" height="15px" align="absmiddle" alt="Phnom Penh">&nbsp;<b>Phnom Penh </b><span>&nbsp;(PNH)</span></a>
+                                    </li>
+                                    <li class="aircode" code="REP" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/KH.png" width="22px" height="15px" align="absmiddle" alt="Siem Reap">&nbsp;<b>Siem Reap </b><span>&nbsp;(REP)</span></a>
+                                    </li>
+                                    <li class="aircode" code="CGK" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/ID.png" width="22px" height="15px" align="absmiddle" alt="Jakarta">&nbsp;<b>Jakarta </b><span>&nbsp;(CGK)</span></a>
+                                    </li>
+                                    <li class="aircode" code="MNL" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/PH.png" width="22px" height="15px" align="absmiddle" alt="Manila">&nbsp;<b>Manila </b><span>&nbsp;(MNL)</span></a>
+                                    </li>
+                                    <li class="aircode" code="KUL" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/MY.png" width="22px" height="15px" align="absmiddle" alt="Kuala Lumpur">&nbsp;<b>Kuala Lumpur </b><span>&nbsp;(KUL)</span></a>
+                                    </li>
+                                    <li class="aircode" code="PNH" typeflight="1">
+                                        <a airportcode="4690,Yangon (RGN)"><img src="https://vietjetvn.com/image/flag/MM.png" width="22px" height="15px" align="absmiddle" alt="Yangon">&nbsp;<b>Yangon </b><span>&nbsp;(RGN)</span></a>
+                                    </li>
+                                    <li class="aircode" code="VTE" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/LA.png" width="22px" height="15px" align="absmiddle" alt="Vientiane">&nbsp;<b>Vientiane </b><span>&nbsp;(VTE)</span></a>
+                                    </li>
+                                    <li class="aircode" code="PKZ" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/LA.png" width="22px" height="15px" align="absmiddle" alt="Pakse">&nbsp;<b>Pakse </b><span>&nbsp;(PKZ)</span></a>
+                                    </li>
+                                    <h2 class="title mb-0">Châu Úc</h2>
+                                    <li class="aircode" code="DRW" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Darwin">&nbsp;<b>Darwin </b><span>&nbsp;(DRW)</span></a>
+                                    </li>
+                                    <li class="aircode" code="SYD" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Sydney">&nbsp;<b>Sydney </b><span>&nbsp;(SYD)</span></a>
+                                    </li>
+                                    <li class="aircode" code="MEL" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Melbourne">&nbsp;<b>Melbourne </b><span>&nbsp;(MEL)</span></a>
+                                    </li>
+                                    <li class="aircode" code="AKL" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Auckland"><b>Auckland </b><span>&nbsp;(AKL)</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <h2 class="title">Trung Quốc</h2>
+                                    <li class="aircode" code="HKG" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/HK.png" width="22px" height="15px" align="absmiddle" alt="Hong Kong">&nbsp;<b>Hong Kong </b><span>&nbsp;(HKG)</span></a>
+                                    </li>
+                                    <li class="aircode" code="MFM" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/MO.png" width="22px" height="15px" align="absmiddle" alt="Macau">&nbsp;<b>Macau </b><span>&nbsp;(MFM)</span></a>
+                                    </li>
+                                    <h2 class="title mb-0">Bắc Á</h2>
+                                    <li class="aircode" code="CAN" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Quảng Châu">&nbsp;<b>Quảng Châu </b><span>&nbsp;(CAN)</span></a>
+                                    </li>
+                                    <li class="aircode" code="PEK" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Bắc Kinh">&nbsp;<b>Bắc Kinh </b><span>&nbsp;(PEK)</span></a>
+                                    </li>
+                                    <li class="aircode" code="CSX" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Changsha">&nbsp;<b>Changsha </b><span>&nbsp;(CSX)</span></a>
+                                    </li>
+                                    <li class="aircode" code="SHA" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Thượng Hải">&nbsp;<b>Thượng Hải </b><span>&nbsp;(SHA)</span></a>
+                                    </li>
+                                    <li class="aircode" code="NNG" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Nam Ninh">&nbsp;<b>Nam Ninh </b><span>&nbsp;(NNG)</span></a>
+                                    </li>
+                                    <li class="aircode" code="PVG" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Thượng Hải">&nbsp;<b>Thượng Hải </b><span>&nbsp;(PVG)</span></a>
+                                    </li>
+                                    <li class="aircode" code="HYD" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/IN.png" width="22px" height="15px" align="absmiddle" alt="Hyderabad">&nbsp;<b>Hyderabad </b><span>&nbsp;(HYD)</span></a>
+                                    </li>
+                                    <li class="aircode" code="TRV" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/IN.png" width="22px" height="15px" align="absmiddle" alt="Trivandrum">&nbsp;<b>Trivandrum </b><span>&nbsp;(TRV)</span></a>
+                                    </li>
+                                    <li class="aircode" code="NGO" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Nagoya">&nbsp;<b>Nagoya </b><span>&nbsp;(NGO)</span></a>
+                                    </li>
+                                    <li class="aircode" code="KIX" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Osaka">&nbsp;<b>Osaka </b><span>&nbsp;(KIX)</span></a>
+                                    </li>
+                                    <li class="aircode" code="NRT" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Tokyo">&nbsp;<b>Tokyo </b><span>&nbsp;(NRT)</span></a>
+                                    </li>
+                                    <li class="aircode" code="PUS" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Busan">&nbsp;<b>Busan </b><span>&nbsp;(PUS)</span></a>
+                                    </li>
+                                    <li class="aircode" code="GMP" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Seoul">&nbsp;<b>Seoul </b><span>&nbsp;(GMP)</span></a>
+                                    </li>
+                                    <li class="aircode" code="ICN" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Seoul">&nbsp;<b>Seoul </b><span>&nbsp;(ICN)</span></a>
+                                    </li>
+                                    <!-- <li class="aircode" code="KHH" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/TW.png" width="22px" height="15px" align="absmiddle" alt="Cao Hùng">&nbsp;<b>Cao Hùng </b><span>&nbsp;(KHH)</span></a>
+                                    </li>
+                                    <li class="aircode" code="TPE" typeflight="1">
+                                        <a><img src="https://vietjetvn.com/image/flag/TW.png" width="22px" height="15px" align="absmiddle" alt="Đài Bắc">&nbsp;<b>Đài Bắc </b><span>&nbsp;(TPE)</span></a>
+                                    </li> -->
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <h2 class="title">Châu Âu</h2>
+                                    <li class="aircode" code="PRG" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/CZ.png" width="22px" height="15px" align="absmiddle" alt="Prague">&nbsp;<b>Prague </b><span>&nbsp;(PRG)</span></a>
+                                    </li>
+                                    <li class="aircode" code="CDG" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/FR.png" width="22px" height="15px" align="absmiddle" alt="Paris">&nbsp;<b>Paris </b><span>&nbsp;(CDG)</span></a>
+                                    </li>
+                                    <li class="aircode" code="FRA" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/DE.png" width="22px" height="15px" align="absmiddle" alt="Frankfurt">&nbsp;<b>Frankfurt </b><span>&nbsp;(FRA)</span></a>
+                                    </li>
+                                    <li class="aircode" code="MOW" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/RU.png" width="22px" height="15px" align="absmiddle" alt="Moscow">&nbsp;<b>Moscow </b><span>&nbsp;(MOW)</span></a>
+                                    </li>
+                                    <li class="aircode" code="LHR" typeflight="2">
+                                        <a><img src="https://vietjetvn.com/image/flag/CA.png" width="22px" height="15px" align="absmiddle" alt="London">&nbsp;<b>London </b><span>&nbsp;(LHR)</span></a>
+                                    </li>
+                                    <h2 class="title mb-0">Châu Mỹ</h2>
+                                    <li class="aircode" code="YTO" typeflight="3">
+                                        <a><img src="https://vietjetvn.com/image/flag/CA.png" width="22px" height="15px" align="absmiddle" alt="Toronto">&nbsp;<b>Toronto </b><span>&nbsp;(YTO)</span></a>
+                                    </li>
+                                    <li class="aircode" code="CHI" typeflight="3">
+                                        <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Chicago">&nbsp;<b>Chicago </b><span>&nbsp;(CHI)</span></a>
+                                    </li>
+                                    <li class="aircode" code="BOS" typeflight="3">
+                                        <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Boston">&nbsp;<b>Boston </b><span>&nbsp;(BOS)</span></a>
+                                    </li>
+                                    <li class="aircode" code="MSP" typeflight="3">
+                                        <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Minneapolis">&nbsp;<b>Minneapolis </b><span>&nbsp;(MSP)</span></a>
+                                    </li>
+                                    <li class="aircode" code="SFO" typeflight="3">
+                                        <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="San Francisco">&nbsp;<b>San Francisco </b><span>&nbsp;(SFO)</span></a>
+                                    </li>
+                                    <li class="aircode" code="SEA" typeflight="3">
+                                        <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Seattle, WA">&nbsp;<b>Seattle, WA </b><span>&nbsp;(SEA)</span></a>
+                                    </li>
+                                    <li class="aircode" code="LAX" typeflight="3">
+                                        <a><img src="https://vietjetvn.com/image/flag/CL.png" width="22px" height="15px" align="absmiddle" alt="Los Angeles">&nbsp;<b>Los Angeles </b><span>&nbsp;(LAX)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="searchList">
+
+                </div>
+            </div>
         </div>
         <link rel="stylesheet" href="../Asset/css/search-flights.css">
         <script src="../Asset/js/search-flights.js"></script>
@@ -459,224 +676,7 @@
     </div>
     <!-- END FOOTER -->
     </div>
-    <div class="sanbay">
-        <div class="tittle-airport d-flex justify-content-between">
-            <p class="mb-0">Lựa chọn thành phố hoặc sân bay đi</p>
-            <i class="fas fa-times" id="close-form-flight"></i>
-        </div>
-        <div class="content-airport mt-2">
-            <ul class="nav nav-pills" id="tab-airport" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active " id="tab-inland" data-toggle="tab" href="#content-inland" role="tab" aria-controls="content-inland" aria-selected="true">
-                   Nội địa
-                   </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="tab-oversea" data-toggle="tab" href="#content-oversea" role="tab" aria-controls="content-oversea" aria-selected="false">
-                   Quốc tế
-                   </a>
-                </li>
-                <li class="nav-item" style="margin-left: 100px;margin-top: 5px;">
-                    <input type="text" placeholder="Nhập tên thành phố hoặc sân bay" style="width:300px;" id="searchFlight">
 
-                </li>
-            </ul>
-            <div class="tab-content" id="tab-airport-content">
-                <div class="tab-pane fade show active " id="content-inland" role="tabpanel" aria-labelledby="tab-inland">
-                    <div class="d-flex justify-content-between">
-                        <ul class="list-unstyled mr-3 ">
-                            <h2 class="text-danger" style="font-size: 1.5rem;">Miền Bắc</h2>
-                            <li class="aircode"><a code="HAN" typeflight="0" airportcode="8772,Hà Nội (HAN)"><b>Hà Nội </b><span>(HAN)</span></a></li>
-                            <li class="aircode"><a code="HPH" typeflight="0" airportcode="8758,Hải Phòng (HPH)"><b>Hải Phòng </b><span>(HPH)</span></a></li>
-                            <li class="aircode"><a code="DIN" typeflight="0" airportcode="8762,Điện Biên Phủ (DIN)"><b>Điện Biên </b><span>(DIN)</span></a></li>
-                            <li class="aircode"><a code="VDO" typeflight="0" airportcode="8762,Vân Đồn (VDO)"><b>Vân Đồn </b><span>(VDO)</span></a></li>
-                        </ul>
-                        <ul class="list-unstyled mr-3 ">
-                            <h2 class="text-danger" style="font-size: 1.5rem;">Miền Trung</h2>
-                            <li class="aircode"><a code="THD" typeflight="0" airportcode="8906,Thanh Hóa (THD)"><b>Thanh Hóa </b><span>(THD)</span></a></li>
-                            <li class="aircode"><a code="VII" typeflight="0" airportcode="8786,Vinh  (VII)"><b>Vinh  </b><span>(VII)</span></a></li>
-                            <li class="aircode"><a code="DAD" typeflight="0" airportcode="8761,Đà Nẵng (DAD)"><b>Đà Nẵng </b><span>(DAD)</span></a></li>
-                            <li class="aircode"><a code="HUI" typeflight="0" airportcode="8775,Huế (HUI)"><b>Huế </b><span>(HUI)</span></a></li>
-                            <li class="aircode"><a code="VDH" typeflight="0" airportcode="8902,Đồng Hới (VDH)"><b>Đồng Hới </b><span>(VDH)</span></a></li>
-                            <li class="aircode"><a code="TBB" typeflight="0" airportcode="8763,Tuy Hòa (TBB)"><b>Tuy Hòa </b><span>(TBB)</span></a></li>
-                            <li class="aircode"><a code="VCL" typeflight="0" airportcode="8903,Chu Lai (VCL)"><b>Chu Lai </b><span>(VCL)</span></a></li>
-                            <li class="aircode"><a code="PXU" typeflight="0" airportcode="8779,Pleiku (PXU)"><b>Pleiku </b><span>(PXU)</span></a></li>
-                        </ul>
-                        <ul class="list-unstyled ">
-                            <h2 class="text-danger" style="font-size: 1.5rem;">Miền Nam</h2>
-                            <li class="aircode"><a code="SGN" typeflight="0" airportcode="8785,Hồ Chí Minh (SGN)"><b>Hồ Chí Minh </b><span>(SGN)</span></a></li>
-                            <li class="aircode"><a code="CXR" typeflight="0" airportcode="8769,Nha Trang (CXR)"><b>Nha Trang </b><span>(CXR)</span></a></li>
-                            <li class="aircode"><a code="DLI" typeflight="0" airportcode="8766,Đà Lạt (DLI)"><b>Đà Lạt </b><span>(DLI)</span></a></li>
-                            <li class="aircode"><a code="PQC" typeflight="0" airportcode="8764,Phú Quốc (PQC)"><b>Phú Quốc </b><span>(PQC)</span></a></li>
-                            <li class="aircode"><a code="VCA" typeflight="0" airportcode="8756,Cần Thơ (VCA)"><b>Cần Thơ </b><span>(VCA)</span></a></li>
-                            <li class="aircode"><a code="VCS" typeflight="0" airportcode="8760,Côn Đảo (VCS)"><b>Côn Đảo </b><span>(VCS)</span></a></li>
-                            <li class="aircode"><a code="VKG" typeflight="0" airportcode="8782,Rạch Giá (VKG)"><b>Rạch Giá </b><span>(VKG)</span></a></li>
-                            <li class="aircode"><a code="CAH" typeflight="0" airportcode="8755,Cà Mau (CAH)"><b>Cà Mau </b><span>(CAH)</span></a></li>
-                            <li class="aircode"><a code="BMV" typeflight="0" airportcode="8777,Buôn Ma Thuột (BMV)"><b>Buôn Ma Thuột </b><span>(BMV)</span></a></li>
-                            <li class="aircode"><a code="UIH" typeflight="0" airportcode="8781,Quy Nhơn (UIH)"><b>Quy Nhơn </b><span>(UIH)</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tab-pane fade " id="content-oversea" role="tabpanel" aria-labelledby="tab-oversea">
-                    <div class="d-flex justify-content-between">
-                        <ul class="list-unstyled">
-                            <h2 class="title">Đông Nam Á</h2>
-                            <li class="aircode" code="HAN" typeflight="0">
-                                <a><img src="https://vietjetvn.com/image/flag/VN.png" width="22px" height="15px" align="absmiddle" alt="Hà Nội">&nbsp;<b>Hà Nội </b><span>&nbsp;(HAN)</span></a>
-                            </li>
-                            <li code="SGN" class="aircode" typeflight="0">
-                                <a><img src="https://vietjetvn.com/image/flag/VN.png" width="22px" height="15px" align="absmiddle" alt="Hồ Chí Minh">&nbsp;<b>Hồ Chí Minh </b><span>&nbsp;(SGN)</span></a>
-                            </li>
-                            <li class="aircode" code="SIN" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/SG.png" width="22px" height="15px" align="absmiddle" alt="Singapore">&nbsp;<b>Singapore </b><span>&nbsp;(SIN)</span></a>
-                            </li>
-                            <li class="aircode" code="BKK" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/TH.png" width="22px" height="15px" align="absmiddle" alt="Bangkok">&nbsp;<b>Bangkok </b><span>&nbsp;(BKK)</span></a>
-                            </li>
-                            <li class="aircode" code="PNH" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/KH.png" width="22px" height="15px" align="absmiddle" alt="Phnom Penh">&nbsp;<b>Phnom Penh </b><span>&nbsp;(PNH)</span></a>
-                            </li>
-                            <li class="aircode" code="REP" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/KH.png" width="22px" height="15px" align="absmiddle" alt="Siem Reap">&nbsp;<b>Siem Reap </b><span>&nbsp;(REP)</span></a>
-                            </li>
-                            <li class="aircode" code="CGK" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/ID.png" width="22px" height="15px" align="absmiddle" alt="Jakarta">&nbsp;<b>Jakarta </b><span>&nbsp;(CGK)</span></a>
-                            </li>
-                            <li class="aircode" code="MNL" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/PH.png" width="22px" height="15px" align="absmiddle" alt="Manila">&nbsp;<b>Manila </b><span>&nbsp;(MNL)</span></a>
-                            </li>
-                            <li class="aircode" code="KUL" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/MY.png" width="22px" height="15px" align="absmiddle" alt="Kuala Lumpur">&nbsp;<b>Kuala Lumpur </b><span>&nbsp;(KUL)</span></a>
-                            </li>
-                            <li class="aircode" code="PNH" typeflight="1">
-                                <a airportcode="4690,Yangon (RGN)"><img src="https://vietjetvn.com/image/flag/MM.png" width="22px" height="15px" align="absmiddle" alt="Yangon">&nbsp;<b>Yangon </b><span>&nbsp;(RGN)</span></a>
-                            </li>
-                            <li class="aircode" code="VTE" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/LA.png" width="22px" height="15px" align="absmiddle" alt="Vientiane">&nbsp;<b>Vientiane </b><span>&nbsp;(VTE)</span></a>
-                            </li>
-                            <li class="aircode" code="PKZ" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/LA.png" width="22px" height="15px" align="absmiddle" alt="Pakse">&nbsp;<b>Pakse </b><span>&nbsp;(PKZ)</span></a>
-                            </li>
-                            <h2 class="title mb-0">Châu Úc</h2>
-                            <li class="aircode" code="DRW" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Darwin">&nbsp;<b>Darwin </b><span>&nbsp;(DRW)</span></a>
-                            </li>
-                            <li class="aircode" code="SYD" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Sydney">&nbsp;<b>Sydney </b><span>&nbsp;(SYD)</span></a>
-                            </li>
-                            <li class="aircode" code="MEL" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Melbourne">&nbsp;<b>Melbourne </b><span>&nbsp;(MEL)</span></a>
-                            </li>
-                            <li class="aircode" code="AKL" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Auckland"><b>Auckland </b><span>&nbsp;(AKL)</span></a>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled">
-                            <h2 class="title">Trung Quốc</h2>
-                            <li class="aircode" code="HKG" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/HK.png" width="22px" height="15px" align="absmiddle" alt="Hong Kong">&nbsp;<b>Hong Kong </b><span>&nbsp;(HKG)</span></a>
-                            </li>
-                            <li class="aircode" code="MFM" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/MO.png" width="22px" height="15px" align="absmiddle" alt="Macau">&nbsp;<b>Macau </b><span>&nbsp;(MFM)</span></a>
-                            </li>
-                            <h2 class="title mb-0">Bắc Á</h2>
-                            <li class="aircode" code="CAN" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Quảng Châu">&nbsp;<b>Quảng Châu </b><span>&nbsp;(CAN)</span></a>
-                            </li>
-                            <li class="aircode" code="PEK" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Bắc Kinh">&nbsp;<b>Bắc Kinh </b><span>&nbsp;(PEK)</span></a>
-                            </li>
-                            <li class="aircode" code="CSX" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Changsha">&nbsp;<b>Changsha </b><span>&nbsp;(CSX)</span></a>
-                            </li>
-                            <li class="aircode" code="SHA" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Thượng Hải">&nbsp;<b>Thượng Hải </b><span>&nbsp;(SHA)</span></a>
-                            </li>
-                            <li class="aircode" code="NNG" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Nam Ninh">&nbsp;<b>Nam Ninh </b><span>&nbsp;(NNG)</span></a>
-                            </li>
-                            <li class="aircode" code="PVG" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Thượng Hải">&nbsp;<b>Thượng Hải </b><span>&nbsp;(PVG)</span></a>
-                            </li>
-                            <li class="aircode" code="HYD" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/IN.png" width="22px" height="15px" align="absmiddle" alt="Hyderabad">&nbsp;<b>Hyderabad </b><span>&nbsp;(HYD)</span></a>
-                            </li>
-                            <li class="aircode" code="TRV" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/IN.png" width="22px" height="15px" align="absmiddle" alt="Trivandrum">&nbsp;<b>Trivandrum </b><span>&nbsp;(TRV)</span></a>
-                            </li>
-                            <li class="aircode" code="NGO" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Nagoya">&nbsp;<b>Nagoya </b><span>&nbsp;(NGO)</span></a>
-                            </li>
-                            <li class="aircode" code="KIX" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Osaka">&nbsp;<b>Osaka </b><span>&nbsp;(KIX)</span></a>
-                            </li>
-                            <li class="aircode" code="NRT" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Tokyo">&nbsp;<b>Tokyo </b><span>&nbsp;(NRT)</span></a>
-                            </li>
-                            <li class="aircode" code="PUS" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Busan">&nbsp;<b>Busan </b><span>&nbsp;(PUS)</span></a>
-                            </li>
-                            <li class="aircode" code="GMP" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Seoul">&nbsp;<b>Seoul </b><span>&nbsp;(GMP)</span></a>
-                            </li>
-                            <li class="aircode" code="ICN" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Seoul">&nbsp;<b>Seoul </b><span>&nbsp;(ICN)</span></a>
-                            </li>
-                            <!-- <li class="aircode" code="KHH" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/TW.png" width="22px" height="15px" align="absmiddle" alt="Cao Hùng">&nbsp;<b>Cao Hùng </b><span>&nbsp;(KHH)</span></a>
-                            </li>
-                            <li class="aircode" code="TPE" typeflight="1">
-                                <a><img src="https://vietjetvn.com/image/flag/TW.png" width="22px" height="15px" align="absmiddle" alt="Đài Bắc">&nbsp;<b>Đài Bắc </b><span>&nbsp;(TPE)</span></a>
-                            </li> -->
-                        </ul>
-                        <ul class="list-unstyled">
-                            <h2 class="title">Châu Âu</h2>
-                            <li class="aircode" code="PRG" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/CZ.png" width="22px" height="15px" align="absmiddle" alt="Prague">&nbsp;<b>Prague </b><span>&nbsp;(PRG)</span></a>
-                            </li>
-                            <li class="aircode" code="CDG" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/FR.png" width="22px" height="15px" align="absmiddle" alt="Paris">&nbsp;<b>Paris </b><span>&nbsp;(CDG)</span></a>
-                            </li>
-                            <li class="aircode" code="FRA" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/DE.png" width="22px" height="15px" align="absmiddle" alt="Frankfurt">&nbsp;<b>Frankfurt </b><span>&nbsp;(FRA)</span></a>
-                            </li>
-                            <li class="aircode" code="MOW" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/RU.png" width="22px" height="15px" align="absmiddle" alt="Moscow">&nbsp;<b>Moscow </b><span>&nbsp;(MOW)</span></a>
-                            </li>
-                            <li class="aircode" code="LHR" typeflight="2">
-                                <a><img src="https://vietjetvn.com/image/flag/CA.png" width="22px" height="15px" align="absmiddle" alt="London">&nbsp;<b>London </b><span>&nbsp;(LHR)</span></a>
-                            </li>
-                            <h2 class="title mb-0">Châu Mỹ</h2>
-                            <li class="aircode" code="YTO" typeflight="3">
-                                <a><img src="https://vietjetvn.com/image/flag/CA.png" width="22px" height="15px" align="absmiddle" alt="Toronto">&nbsp;<b>Toronto </b><span>&nbsp;(YTO)</span></a>
-                            </li>
-                            <li class="aircode" code="CHI" typeflight="3">
-                                <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Chicago">&nbsp;<b>Chicago </b><span>&nbsp;(CHI)</span></a>
-                            </li>
-                            <li class="aircode" code="BOS" typeflight="3">
-                                <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Boston">&nbsp;<b>Boston </b><span>&nbsp;(BOS)</span></a>
-                            </li>
-                            <li class="aircode" code="MSP" typeflight="3">
-                                <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Minneapolis">&nbsp;<b>Minneapolis </b><span>&nbsp;(MSP)</span></a>
-                            </li>
-                            <li class="aircode" code="SFO" typeflight="3">
-                                <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="San Francisco">&nbsp;<b>San Francisco </b><span>&nbsp;(SFO)</span></a>
-                            </li>
-                            <li class="aircode" code="SEA" typeflight="3">
-                                <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Seattle, WA">&nbsp;<b>Seattle, WA </b><span>&nbsp;(SEA)</span></a>
-                            </li>
-                            <li class="aircode" code="LAX" typeflight="3">
-                                <a><img src="https://vietjetvn.com/image/flag/CL.png" width="22px" height="15px" align="absmiddle" alt="Los Angeles">&nbsp;<b>Los Angeles </b><span>&nbsp;(LAX)</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="searchList">
-
-        </div>
-    </div>
     <p class="lunar-depart" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-depart">Âm lịch: Ngày 28/9/2020</p>
     <p class="lunar-return" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-return">Âm lịch: Ngày 29/9/2020</p>
     <input type="hidden" id="ngaydi_flag" value="1">

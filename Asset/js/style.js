@@ -39,7 +39,7 @@ $(document).ready(function() {
         $(".sanbay").addClass("depart");
         $(".sanbay").show();
         $(".sanbay").css({
-            top: '-120px',
+            top: '543px',
             left: '444px'
         });
     });
@@ -48,7 +48,7 @@ $(document).ready(function() {
         $(".sanbay").removeClass("depart");
         $(".sanbay").addClass("return");
         $(".sanbay").css({
-            top: '-120px',
+            top: '543px',
             left: '707px'
         });
         $(".sanbay").show();
@@ -128,6 +128,13 @@ $(document).ready(function() {
         } else {
             window.location.href = "/pages/timkiem.html";
         }
+    });
+    //change flight
+    $("#icon-switch-flight").click(function() {
+        var departCity = $("#departCity").val();
+        var returnCity = $("#returnCity").val();
+        $("#departCity").val(returnCity);
+        $("#returnCity").val(departCity);
     });
 });
 
