@@ -47,7 +47,7 @@ body {
 /* ============================================CONTENT===================================== */
 
 #wp-find-flight {
-    background-image: url("https://bambooairlines.com.vn/BG-FLYBAMBOO.COM.VN.png");
+    background-image: url("/Asset/img/bg_col.png");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1920px auto;
