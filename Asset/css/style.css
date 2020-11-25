@@ -595,6 +595,7 @@ td>a {
 #wp-footer {
     background-color: #fff;
     font-size: 14px;
+    border-top: 1px solid #a09c9c;
 }
 
 #wp-footer ul li {
