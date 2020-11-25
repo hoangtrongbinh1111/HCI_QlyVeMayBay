@@ -589,38 +589,47 @@ td>a {
     height: 1000px; */
 }
 
+
 /*================================FOOTER==================================*/
-#wp-footer{
+
+#wp-footer {
     background-color: #fff;
     font-size: 14px;
     border-top: 1px solid #a09c9c;
 }
-#wp-footer ul li{
+
+#wp-footer ul li {
     text-transform: none;
     text-decoration: none;
     list-style: none;
     padding-bottom: 5px;
     font-size: 13px;
     line-height: 24px;
-
 }
+
 #wp-footer ul {
     padding-left: 0px;
 }
-#wp-footer .footer_topic{
+
+#wp-footer .footer_topic {
     font-weight: 700;
     padding-bottom: 10px;
 }
-#wp-footer ul li a{
+
+#wp-footer ul li a {
     text-decoration: none;
     color: #000;
 }
-#wp-footer ul li a:hover{
-    color:#00adef;
-}
-.code button{
-        margin-bottom: 5px;
-        margin-left: 20px;
+
+#wp-footer ul li a:hover {
+    color: #00adef;
 }
 
+.code button {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
 
+.fade {
+    opacity: 1 !important;
+}

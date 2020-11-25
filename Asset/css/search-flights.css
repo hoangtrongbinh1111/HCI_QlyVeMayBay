@@ -57,3 +57,15 @@ input#stop-point[type=checkbox] {
     border-radius: 2rem;
     padding: 5px 10px;
 }
+
+#more-flights button:hover {
+    background-color: rgba(33, 33, 33, 0.04);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+    display: none;
+    z-index: 1;
+}
