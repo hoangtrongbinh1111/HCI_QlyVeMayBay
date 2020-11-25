@@ -303,3 +303,8 @@
 .promo label{
     cursor: pointer;
 }
+
+#fullname_error,#phone_error,#address_error{
+    color: red;
+    font-size: 14px;
+}
