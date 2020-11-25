@@ -1,5 +1,31 @@
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector(
+            "body").style.visibility = "hidden";
+        document.querySelector(
+            "#loader").style.visibility = "visible";
+    } else {
+        document.querySelector(
+            "#loader").style.display = "none";
+        document.querySelector(
+            "body").style.visibility = "visible";
+    }
+};
 $(document).ready(function() {
-
+    $(window).scroll(function() {
+        var leng = $(window).scrollTop();
+        if (leng != 0) {
+            $('.back-to-top').fadeIn();
+        } else {
+            $('.back-to-top').fadeOut();
+        }
+    });
+    $("#back-to-top").click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    })
     $("#plus_adult").click(function() {
         var qty = parseInt($("#adult_qty").val());
         $("#adult_qty").val(qty + 1);
@@ -90,8 +116,24 @@ $(document).ready(function() {
     $("#tab-airport-content ul li").click(function() {
         if ($(".sanbay").hasClass("depart")) {
             $("#departCity").val($(this).text().trim());
+            $(".sanbay").removeClass("depart");
+            $(".sanbay").addClass("return");
+            $(".sanbay").hide();
+            $(".sanbay").css({
+                top: '543px',
+                left: '707px'
+            });
+            $(".sanbay").show();
         } else if ($(".sanbay").hasClass("return")) {
             $("#returnCity").val($(this).text().trim());
+            if ($("input#flag_open_calendar").val() == "false") {
+                $("input#flag_open_calendar").val("true");
+                $(".sanbay").hide();
+                $("#ngaydi_flag").val(1);
+                var dateToday = new Date();
+                $('#datepicker').datepicker('option', 'minDate', dateToday, 'numberOfMonths', 5);
+                $("#datepicker").show();
+            }
         }
     });
     //close form flight
@@ -126,7 +168,17 @@ $(document).ready(function() {
         } else if ($("#returnCity").val() == $("#departCity").val()) {
             alert("Hành trình bị trùng");
         } else {
-            window.location.href = "/pages/timkiem.html";
+            var departCity = $("#departCity").val();
+            var returnCity = $("#returnCity").val();
+            var depart_day = $("#flights-checkin").val();
+            var return_day = $("#flights-checkout").val();
+            var qty_guest = Number($("input#adult_qty").val()) + Number($("input#child_qty").val()) + Number($("input#infant_qty").val());
+            if ($("#ngaydi_flag").val() == 2) {
+                window.location.href = "/pages/timkiem.html?departCity=" + departCity + "&returnCity=" + returnCity + "&depart_day=" + depart_day + "&return_day=" + return_day + "&qty_guest=" + qty_guest;
+            } else if ($("#ngaydi_flag").val() == 1) {
+                window.location.href = "/pages/timkiem.html?departCity=" + departCity + "&returnCity=" + returnCity + "&depart_day=" + depart_day + "&qty_guest=" + qty_guest;
+            }
+
         }
     });
     //change flight
@@ -136,12 +188,29 @@ $(document).ready(function() {
         $("#departCity").val(returnCity);
         $("#returnCity").val(departCity);
     });
+
 });
 
 function selectFlight(fl) {
     if ($(".sanbay").hasClass("depart")) {
         $("#departCity").val(fl);
+        $(".sanbay").removeClass("depart");
+        $(".sanbay").addClass("return");
+        $(".sanbay").hide();
+        $(".sanbay").css({
+            top: '543px',
+            left: '707px'
+        });
+        $(".sanbay").show();
     } else if ($(".sanbay").hasClass("return")) {
         $("#returnCity").val(fl);
+        if ($("input#flag_open_calendar").val() == "false") {
+            $("input#flag_open_calendar").val("true");
+            $(".sanbay").hide();
+            $("#ngaydi_flag").val(1);
+            var dateToday = new Date();
+            $('#datepicker').datepicker('option', 'minDate', dateToday, 'numberOfMonths', 5);
+            $("#datepicker").show();
+        }
     }
 }
