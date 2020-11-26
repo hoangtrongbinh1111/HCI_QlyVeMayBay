@@ -174,9 +174,9 @@ $(document).ready(function() {
             var return_day = $("#flights-checkout").val();
             var qty_guest = Number($("input#adult_qty").val()) + Number($("input#child_qty").val()) + Number($("input#infant_qty").val());
             if ($("#ngaydi_flag").val() == 2) {
-                window.location.href = "/pages/timkiem.html?departCity=" + departCity + "&returnCity=" + returnCity + "&depart_day=" + depart_day + "&return_day=" + return_day + "&qty_guest=" + qty_guest;
+                window.location.href = "../pages/timkiem.html?departCity=" + departCity + "&returnCity=" + returnCity + "&depart_day=" + depart_day + "&return_day=" + return_day + "&qty_guest=" + qty_guest;
             } else if ($("#ngaydi_flag").val() == 1) {
-                window.location.href = "/pages/timkiem.html?departCity=" + departCity + "&returnCity=" + returnCity + "&depart_day=" + depart_day + "&qty_guest=" + qty_guest;
+                window.location.href = "../pages/timkiem.html?departCity=" + departCity + "&returnCity=" + returnCity + "&depart_day=" + depart_day + "&qty_guest=" + qty_guest;
             }
 
         }
