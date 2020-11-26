@@ -37,7 +37,11 @@
     <title>Đặt vé máy bay</title>
 
 </head>
-
+<style>
+    .modal-backdrop{
+        background-color: unset;
+    }
+</style>
 <body>
     <div id="loader" class="center"></div>
     <div id="wrapper">
@@ -59,16 +63,16 @@
                                         <div class="collapse navbar-collapse" id="main-nav">
                                             <ul class="navbar-nav mr-auto">
                                                 <li class="nav-item">
-                                                    <a href="" class="nav-link">Trang chủ</a>
+                                                    <a href="Index.html" class="nav-link">Trang chủ</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="" class="nav-link">Vé máy bay</a>
+                                                    <a href="timkiem.html" class="nav-link">Vé máy bay</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="" class="nav-link">Thanh toán vé</a>
+                                                    <a href="payment.html" class="nav-link">Thanh toán vé</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="" class="nav-link">Hoán đổi vé</a>
+                                                    <a href="Hoan-Doi-Ve.html" class="nav-link">Hoán đổi vé</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="" class="nav-link">Liên hệ</a>
@@ -91,15 +95,15 @@
                 <div id="find-flight">
                     <div id="find-header">
                         TÌM CHUYẾN BAY
-                        <img src="https://bambooairlines.com.vn/images/index_plane.png" class="float-right mt-1" width="20" height="21">
+                        <img src="../Asset/img/index_plane.png" class="float-right mt-1" width="20" height="21">
                     </div>
                     <div id="find-content">
                         <div id="find-content-header">
                             <p>322 Airlines hơn cả một chuyến bay</p>
                             <a title="Check-in trực tuyến" href="#" target="_blank">
-                                <img class=" " src="https://bambooairlines.com.vn/userupload/hinhanh/ticketicon.png" width="115" height="">
+                                <img class=" " src="../Asset/img/ticketicon.png" width="115" height="">
                             </a>
-                            <img class=" " src="https://bambooairlines.com.vn/userupload/hinhanh/bamboo-airways-fb.traihathanh.png">
+                            <img class=" " src="../Asset/img/bamboo-airways-fb.traihathanh.png">
                             <b> Check-in online</b>
                         </div>
                         <div class="find-content-form">
@@ -534,110 +538,114 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-            <div class="footer_topic">
-               Công ty TNHH 322 Airlines Việt Nam
-            </div>
-            <div class="footer_content">
-                <ul>
-                    <li>Hà Nội: 024 7109 9999</li>
-                    <li>Hồ Chí Minh: 028 7109 9998</li>
-                    <li>Email: admin@322AirLines.vn</li>
-                    <li>Văn phòng Hà Nội: Tầng 11, Tòa Peakview, 36 Hoàng Cầu, Đống Đa</li>
-                   
-                    <li>Văn phòng HCM: Tầng 6, Tòa Nhà Central Park, 117 Nguyễn Du, Q.1</li>
-                   
-                    <br>
-                    <li>Số ĐKKD: 0105983269 cấp ngày 30/08/2012</li>
-                    <li>Nơi cấp: Sở kế hoạch và Đầu tư thành phố Hà Nội</li>
-                    <li>Lĩnh vực kinh doanh: Đại lý du lịch</li>
-                    <li>Địa chỉ tên miền: 322AirLines.vn</li>
-                    <br>
-                    <li>Tài khoản ngân hàng số: 19027493250015</li>
-                    <li>Techcombank Chi nhánh Hội Sở</li>
-                    <li>Chủ tài khoản: Công ty TNHH 322 Airlines Việt Nam</li>
-                </ul>
+                    <div class="footer_topic">
+                        Công ty TNHH 322 Airlines Việt Nam
+                    </div>
+                    <div class="footer_content">
+                        <ul>
+                            <li>Hà Nội: 024 7109 9999</li>
+                            <li>Hồ Chí Minh: 028 7109 9998</li>
+                            <li>Email: admin@322AirLines.vn</li>
+                            <li>Văn phòng Hà Nội: Tầng 11, Tòa Peakview, 36 Hoàng Cầu, Đống Đa</li>
+
+                            <li>Văn phòng HCM: Tầng 6, Tòa Nhà Central Park, 117 Nguyễn Du, Q.1</li>
+
+                            <br>
+                            <li>Số ĐKKD: 0105983269 cấp ngày 30/08/2012</li>
+                            <li>Nơi cấp: Sở kế hoạch và Đầu tư thành phố Hà Nội</li>
+                            <li>Lĩnh vực kinh doanh: Đại lý du lịch</li>
+                            <li>Địa chỉ tên miền: 322AirLines.vn</li>
+                            <br>
+                            <li>Tài khoản ngân hàng số: 19027493250015</li>
+                            <li>Techcombank Chi nhánh Hội Sở</li>
+                            <li>Chủ tài khoản: Công ty TNHH 322 Airlines Việt Nam</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer_topic text-uppercase">
+                        Quy định dành cho Website TMĐT Bán hàng – Dịch vụ đặt phòng
+                    </div>
+                    <div class="footer_content">
+                        <ul>
+                            <li><a href="">Chính sách và quy định chung</a></li>
+                            <li><a href="">Quy định về thanh toán</a></li>
+                            <li><a href="">Quy định về xác nhận thông tin đặt phòng</a></li>
+                            <li><a href="">Chính sách về hủy đặt phòng và hoàn trả tiền</a></li>
+                            <li><a href="">Chính sách bảo mật thông tin</a></li>
+                            <li>
+                                <a href=""><img src="../Asset/img/logo-dathongbao-bocongthuong-w165.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_topic text-uppercase">
+                        Quy định cho sàn GDTMĐT – Dịch vụ đặt phòng và dịch vụ đặt tour du lịch
+                    </div>
+                    <div class="footer_content">
+                        <ul>
+                            <li><a href="">Quy chế hoạt động</a></li>
+                            <li><a href="">Chính sách bảo mật</a></li>
+                            <li><a href="">Quy trình giải quyết tranh chấp khiếu nại</a></li>
+
+                            <li>
+                                <a href=""><img src="../Asset/img/logo-congthuong-w165.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer_topic text-uppercase">
+                        Khách sạn tại Việt Nam
+                    </div>
+                    <div class="footer_content">
+                        <ul>
+                            <li><a href="">A</a> - <a href="">B</a> - <a href="">C</a> - <a href="">D</a> - <a href="">E</a> - <a href="">F</a> - <a href="">G</a> - <a href="">H</a> - <a href="">I</a> - <a href="">J</a> - <a href="">K</a> - <a href="">L</a>                                - <a href="">M</a> - <a href="">N</a> - <a href="">O</a> - <a href="">P</a> - <a href="">Q</a> - <a href="">R</a> - <a href="">S</a> - <a href="">T</a> - <a href="">U</a> - <a href="">V</a> - <a href="">W</a> - <a href="">X</a>                                - <a href="">Y</a> - <a href="">Z</a> - Khách sạn theo khu vực</li>
+
+                        </ul>
+                    </div>
+                    <div class="footer_topic">
+                        Khách hàng và đối tác
+                    </div>
+                    <div class="footer_content">
+                        <ul>
+
+                            <li><a href="">Tích lũy Vpoint</a></li>
+                            <li><a href="">Đăng nhập</a></li>
+                            <li><a href="">Đăng ký</a></li>
+                            <li><a href="">Đăng nhập HMS</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer_topic text-uppercase">
+                        Tải Mobile app 322AirLines.vn
+                    </div>
+                    <div class="footer_content">
+                        <a href=""><img style="width: 130px" src="../Asset/img/btn-app-apple.png" alt=""></a>
+                        <a href=""><img style="width: 130px" src="../Asset/img/btn-app-android.png" alt=""></a>
+                    </div>
+                    <div class="footer_topic text-uppercase mt-4">
+                        Kết nối với 322AirLines.vn
+                    </div>
+                    <div class="footer_content">
+                        <a href=""><i style="font-size: 25px;margin-right: 30px;color: #4c66a4;" class="fab fa-facebook-square"></i></a>
+                        <a href=""><i  style="font-size: 25px;margin-right: 30px;color: #D50F25;" class="fab fa-google-plus-square"></i></a>
+                        <a href=""><i style="font-size: 25px;margin-right: 30px;color: #bf3566;" class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer_content">
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="footer_topic text-uppercase">
-                Quy định dành cho Website TMĐT Bán hàng – Dịch vụ đặt phòng
-            </div>
-            <div class="footer_content">
-                <ul>
-                    <li><a href="">Chính sách và quy định chung</a></li>
-                    <li><a href="">Quy định về thanh toán</a></li>
-                    <li><a href="">Quy định về xác nhận thông tin đặt phòng</a></li>
-                    <li><a href="">Chính sách về hủy đặt phòng và hoàn trả tiền</a></li>
-                    <li><a href="">Chính sách bảo mật thông tin</a></li>
-                    <li><a href=""><img src="../Asset/img/logo-dathongbao-bocongthuong-w165.png" alt=""></a></li>
-                </ul>
-            </div>
-             <div class="footer_topic text-uppercase">
-               Quy định cho sàn GDTMĐT – Dịch vụ đặt phòng và dịch vụ đặt tour du lịch
-            </div>
-            <div class="footer_content">
-                <ul>
-                    <li><a href="">Quy chế hoạt động</a></li>
-                    <li><a href="">Chính sách bảo mật</a></li>
-                    <li><a href="">Quy trình giải quyết tranh chấp khiếu nại</a></li>
-                   
-                    <li><a href=""><img src="../Asset/img/logo-congthuong-w165.png" alt=""></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="footer_topic text-uppercase">
-                Khách sạn tại Việt Nam
-            </div>
-            <div class="footer_content">
-                <ul>
-                    <li><a href="">A</a> - <a href="">B</a> - <a href="">C</a> - <a href="">D</a> - <a href="">E</a> - <a href="">F</a> - <a href="">G</a> - <a href="">H</a> - <a href="">I</a> - <a href="">J</a> - <a href="">K</a> - <a href="">L</a> - <a href="">M</a> - <a href="">N</a> - <a href="">O</a> - <a href="">P</a> - <a href="">Q</a> - <a href="">R</a> - <a href="">S</a> - <a href="">T</a> - <a href="">U</a> - <a href="">V</a> - <a href="">W</a> - <a href="">X</a> - <a href="">Y</a> - <a href="">Z</a> - Khách sạn theo khu vực</li>
-                    
-                </ul>
-            </div>
-            <div class="footer_topic">
-                Khách hàng và đối tác
-            </div>
-            <div class="footer_content">
-                <ul>
-                    
-                    <li><a href="">Tích lũy Vpoint</a></li>
-                    <li><a href="">Đăng nhập</a></li>
-                    <li><a href="">Đăng ký</a></li>
-                     <li><a href="">Đăng nhập HMS</a></li>
-                </ul>
-            </div>
-           
-            
-            <div class="footer_topic text-uppercase">
-                Tải Mobile app 322AirLines.vn
-            </div>
-            <div class="footer_content">
-                <a href=""><img  style="width: 130px" src="../Asset/img/btn-app-apple.png" alt=""></a>
-                <a href="" ><img  style="width: 130px" src="../Asset/img/btn-app-android.png" alt=""></a>
-            </div>
-            <div class="footer_topic text-uppercase mt-4">
-               Kết nối với 322AirLines.vn
-            </div>
-            <div class="footer_content">
-                <a href=""><i style="font-size: 25px;margin-right: 30px;color: #4c66a4;" class="fab fa-facebook-square"></i></a>
-                <a href=""><i  style="font-size: 25px;margin-right: 30px;color: #D50F25;" class="fab fa-google-plus-square"></i></a>
-                <a href=""><i style="font-size: 25px;margin-right: 30px;color: #bf3566;" class="fab fa-instagram"></i></a>
-            </div>
-            <div class="footer_content">
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-            </div>
-        </div>
-        
-            </div>
-        </div>
-</div>
-<!-- END FOOTER -->
+    </div>
+    <!-- END FOOTER -->
     </div>
 
     <p class="lunar-depart" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-depart">Âm lịch: Ngày 28/9/2020</p>
