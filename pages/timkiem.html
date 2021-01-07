@@ -38,10 +38,11 @@
 
 </head>
 <style>
-    .modal-backdrop{
+    .modal-backdrop {
         background-color: unset;
     }
 </style>
+
 <body>
     <div id="loader" class="center"></div>
     <div id="wrapper">
@@ -61,7 +62,7 @@
                                                     <span class="navbar-toggler-icon"></span>
                                                 </button>
                                         <div class="collapse navbar-collapse" id="main-nav">
-                                            <ul class="navbar-nav mr-auto">
+                                            <ul class="navbar-nav mr-auto" style="width: 740px;">
                                                 <li class="nav-item">
                                                     <a href="Index.html" class="nav-link">Trang chủ</a>
                                                 </li>
@@ -73,6 +74,28 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="Hoan-Doi-Ve.html" class="nav-link">Hoán đổi vé</a>
+                                                </li>
+                                                <li class="nav-item hd">
+                                                    <a href="HuongDan.html" class="nav-link">Hướng dẫn</a>
+                                                    <div class="dropdown-hd ">
+                                                        <ul class="list-unstyled ml-2">
+                                                            <li>
+                                                                <a href="HuongDan.html" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các quy định đặt vé</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các thông tin cần biết</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="" class="nav-link">Liên hệ</a>
@@ -100,11 +123,11 @@
                     <div id="find-content">
                         <div id="find-content-header">
                             <p>322 Airlines hơn cả một chuyến bay</p>
-                            <a title="Check-in trực tuyến" href="#" target="_blank">
+                            <a title="Check-in trực tuyến" href="KhuyenMai.html" target="_blank">
                                 <img class=" " src="../Asset/img/ticketicon.png" width="115" height="">
                             </a>
                             <img class=" " src="../Asset/img/bamboo-airways-fb.traihathanh.png">
-                            <b> Check-in online</b>
+                            <b class="coupon-text"> Khuyến mãi !!!</b>
                         </div>
                         <div class="find-content-form">
                             <form class="search-form">
@@ -715,7 +738,15 @@
             //defaults
             $("#flights-checkin").val(dateToday.getDate() + "-" + (dateToday.getMonth() + 1) + "-" + dateToday.getFullYear());
             var lunID = $("#flights-checkin").val().split("-").join("");
+            var lunID_ = $("#flights-checkin").val().split("-");
+            if (Number(lunID_[0]) - 10 < 0) {
+                lunID_[0] = "0" + lunID_[0];
+            }
+            if (Number(lunID_[1]) - 10 < 0) {
+                lunID = lunID_[0] + "0" + lunID_[1] + lunID_[2];
+            }
             $(".lunar-depart").html("Âm lịch: " + TUAN[(jdn(dateToday.getDate(), (dateToday.getMonth() + 1), dateToday.getFullYear()) + 1) % 7] + " " + $("span#" + lunID).data("lunarday") + "/" + $("span#" + lunID).data("lunarmonth") + " " + getYearCanChi($("span#" + lunID).data("lunaryear")));
+
             var res = alertDayInfo($("span#" + lunID).data("lunarday"), $("span#" + lunID).data("lunarmonth"), $("span#" + lunID).data("lunaryear"), 0, jdn(dateToday.getDate(), (dateToday.getMonth() + 1), dateToday.getFullYear()), dateToday.getDate(), (dateToday.getMonth() + 1), dateToday.getFullYear()).split("/*space*/");
             var tooltip_text = "";
             tooltip_text += "<b>" + res[0] + " " + res[1] + "</b>";
@@ -727,6 +758,13 @@
             var date_after_2days = new Date(dateToday.setDate(dateToday.getDate() + 2));
             $("#flights-checkout").val(date_after_2days.getDate() + "-" + (date_after_2days.getMonth() + 1) + "-" + date_after_2days.getFullYear());
             var lun_ret_ID = $("#flights-checkout").val().split("-").join("");
+            var lun_ret_ID_ = $("#flights-checkout").val().split("-");
+            if (Number(lun_ret_ID_[0]) - 10 < 0) {
+                lun_ret_ID_[0] = "0" + lun_ret_ID_[0];
+            }
+            if (Number(lun_ret_ID_[1]) - 10 < 0) {
+                lun_ret_ID = lun_ret_ID_[0] + "0" + lun_ret_ID_[1] + lun_ret_ID_[2];
+            }
             $(".lunar-return").html("Âm lịch: " + TUAN[(jdn(date_after_2days.getDate(), (date_after_2days.getMonth() + 1), date_after_2days.getFullYear()) + 1) % 7] + " " + $("span#" + lun_ret_ID).data("lunarday") + "/" + $("span#" + lun_ret_ID).data("lunarmonth") + " " + getYearCanChi($("span#" + lun_ret_ID).data("lunaryear")));
             res = alertDayInfo($("span#" + lun_ret_ID).data("lunarday"), $("span#" + lun_ret_ID).data("lunarmonth"), $("span#" + lun_ret_ID).data("lunaryear"), 0, jdn(date_after_2days.getDate(), (date_after_2days.getMonth() + 1), date_after_2days.getFullYear()), date_after_2days.getDate(), (date_after_2days.getMonth() + 1), date_after_2days.getFullYear()).split("/*space*/");
             var tooltip_text = "";

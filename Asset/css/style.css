@@ -3,10 +3,6 @@ body {
     font-size: 16px;
 }
 
-#wrapper {
-    background: #e1e1e1;
-}
-
 
 /* -------Menu Header------- */
 
@@ -29,18 +25,28 @@ body {
 
 #main-nav {}
 
-#main-nav ul li a {
-    font-size: 20px;
+#main-nav>ul>li>a {
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: bold;
     color: #4E4E50;
     margin-right: 10px;
 }
 
-#main-nav ul li:hover a {
+#main-nav>ul>li:hover>a {
     background: #00305b none repeat scroll 0 0;
     color: white;
     border-radius: 2rem;
+}
+
+.dropdown-hd {
+    position: absolute;
+    background: #e1e1e1;
+    display: none;
+}
+
+.hd:hover .dropdown-hd {
+    display: block;
 }
 
 
@@ -112,7 +118,7 @@ body {
 
 #find-content-header>b {
     position: absolute;
-    margin-top: -37px;
+    margin-top: -43px;
     font-size: 18px;
     right: -164px;
     color: tomato;
@@ -179,6 +185,14 @@ body {
 
 .flightType input:checked~.checkmark:after {
     display: block;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    z-index: 1;
 }
 
 
@@ -656,4 +670,94 @@ td>a {
 
 .fade {
     opacity: 1 !important;
+}
+
+
+/* -----------------------Chữ nhấp nháy-------------------------------- */
+
+@-webkit-keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@-moz-keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@-o-keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.coupon-text {
+    /* background: #3d3d3d; */
+    font-size: 24px;
+    font-weight: bold;
+    -webkit-animation: my 500ms infinite;
+    -moz-animation: my 500ms infinite;
+    -o-animation: my 500ms infinite;
+    animation: my 500ms infinite;
+}
+
+
+/* -------------------Thông tin hiện ẩn------------------ */
+
+@keyframes showhide_info {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#new-book-1 {
+    animation: showhide_info 2s;
+}
+
+#new-book-2 {
+    animation: showhide_info 2s;
 }
