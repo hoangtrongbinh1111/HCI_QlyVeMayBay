@@ -53,7 +53,7 @@ body {
 /* ============================================CONTENT===================================== */
 
 #wp-find-flight {
-    background-image: url("/Asset/img/bg_col.png");
+    background-image: url("../img/bg_col.png");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 1920px auto;
