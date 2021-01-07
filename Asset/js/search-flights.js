@@ -22,7 +22,18 @@ $(document).ready(function() {
     var depart_day = getParameterByName("depart_day", query);
     var return_day = getParameterByName("return_day", query);
     var qty_guest = getParameterByName("qty_guest", query);
-
+    if (departCity == null) {
+        departCity = "Hà Nội (HAN)";
+    }
+    if (returnCity == null) {
+        returnCity = "Hồ Chí Minh (SGN)";
+    }
+    if (depart_day == null) {
+        depart_day = "08-01-2021";
+    }
+    if (qty_guest == null) {
+        qty_guest = "1";
+    }
     //end get info
     $(".btn-info-flights").click(function() {
         $(this).find("i").toggleClass("down");

@@ -48,6 +48,22 @@
             margin-top: 2rem;
         }
     </style>
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        var query = window.location.search;
+        //alert(decodeURI(query));
+        var queue = getParameterByName("queue", query);
+        $(document).ready(function() {
+            $("#tittle-queue").text(queue);
+        });
+    </script>
     <div id="loader" class="center"></div>
     <div id="wrapper">
         <!-- HEADER -->
@@ -80,23 +96,23 @@
                                                     <a href="Hoan-Doi-Ve.html" class="nav-link">Hoán đổi vé</a>
                                                 </li>
                                                 <li class="nav-item hd">
-                                                    <a href="HuongDan.html" class="nav-link">Hướng dẫn</a>
+                                                    <a href="HuongDan.html?queue=Hướng dẫn đặt vé" class="nav-link">Hướng dẫn</a>
                                                     <div class="dropdown-hd ">
                                                         <ul class="list-unstyled ml-2">
                                                             <li>
-                                                                <a href="HuongDan.html" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
+                                                                <a href="HuongDan.html?queue=Hướng dẫn mua vé máy bay" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
+                                                                <a href="HuongDan.html?queue=Hướng dẫn thanh toán vé máy bay" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
+                                                                <a href="HuongDan.html?queue=Các trường hợp hành khách bị cấm bay" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các quy định đặt vé</a>
+                                                                <a href="HuongDan.html?queue=Các quy định đặt vé" class="nav-link font-weight-bold">Các quy định đặt vé</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các thông tin cần biết</a>
+                                                                <a href="HuongDan.html?queue=Các thông tin cần biết" class="nav-link font-weight-bold">Các thông tin cần biết</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -119,7 +135,7 @@
         <div id="content" class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="font-weight-bold text-success mt-3">Hướng dẫn đặt vé</h4>
+                    <h4 class="font-weight-bold text-success mt-3" id="tittle-queue">Hướng dẫn đặt vé</h4>
                     <div class="step-queue">
                         <p><b class="border-bottom">Bước 1: </b>Truy cập <b>www.322airlines.com.vn</b>. Bạn chọn Sân bay điểm đi và đến, chuyến khứ hồi hoặc một chiều, ngày đi, ngày về và số lượng hành khách, trẻ em đi cùng và nhấp chuột vào <b class="text-success">TÌM CHUYẾN BAY</b></p>
                         <div class="text-center">

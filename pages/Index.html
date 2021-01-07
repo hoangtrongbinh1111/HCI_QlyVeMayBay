@@ -40,6 +40,8 @@
 </head>
 
 <body>
+
+
     <div id="loader" class="center"></div>
     <div id="wrapper">
         <!-- HEADER -->
@@ -72,23 +74,23 @@
                                                     <a href="Hoan-Doi-Ve.html" class="nav-link">Hoán đổi vé</a>
                                                 </li>
                                                 <li class="nav-item hd">
-                                                    <a href="HuongDan.html" class="nav-link">Hướng dẫn</a>
+                                                    <a href="HuongDan.html?queue=Hướng dẫn đặt vé" class="nav-link">Hướng dẫn</a>
                                                     <div class="dropdown-hd ">
                                                         <ul class="list-unstyled ml-2">
                                                             <li>
-                                                                <a href="HuongDan.html" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
+                                                                <a href="HuongDan.html?queue=Hướng dẫn mua vé máy bay" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
+                                                                <a href="HuongDan.html?queue=Hướng dẫn thanh toán vé máy bay" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
+                                                                <a href="HuongDan.html?queue=Các trường hợp hành khách bị cấm bay" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các quy định đặt vé</a>
+                                                                <a href="HuongDan.html?queue=Các quy định đặt vé" class="nav-link font-weight-bold">Các quy định đặt vé</a>
                                                             </li>
                                                             <li>
-                                                                <a href="HuongDan.html" class="nav-link font-weight-bold">Các thông tin cần biết</a>
+                                                                <a href="HuongDan.html?queue=Các thông tin cần biết" class="nav-link font-weight-bold">Các thông tin cần biết</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -438,10 +440,6 @@
         <div id="introduce_flight" class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="text-center">
-
-
-                    </div>
                     <h5 class="text-center">Vé máy bay khách đặt mới nhất</h5>
                     <ul class="list-unstyled">
                         <li></li>
@@ -452,7 +450,7 @@
                         <div class="col-md-6">
                             <img src="../Asset/img/92.jpg" alt="" class="img-fluid w-100">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="new_guest">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
@@ -814,7 +812,68 @@
         </div>
     </div>
     <!-- END SUBCRIBE -->
+    <div id="customer-comment" class="container mb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div style="background-color: lightgoldenrodyellow;">
+                            <h5>Khách hàng nói về chúng tôi</h5>
+                            <div class="comment d-flex">
+                                <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                    <span>Dear Abay Mình mất chứng minh nhân dân,cung mất cả giấy tờ xe các loại,nay mình xin được giấy xác nhận của địa phương vậy có mua được ...</span><br>
+                                    <p>Tạ Mạnh Dũng - 090742517X</p>
+                                </div>
+                            </div>
+                            <div class="comment d-flex">
+                                <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                    <span>Đây là lần đầu tiên mình đặt vé máy bay trực tuyến qua Abay.vn. Đây là 1 hình thức đặt vé và thanh toán cực kỳ thuận tiện và nhanh chón ...</span><br>
+                                    <p>Phạm Văn Đức - 097798289X</p>
+                                </div>
+                            </div>
+                            <div class="comment d-flex">
+                                <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                    <span>Mình thường phải đi công tác Hà Nội - Sai Gòn nhiều, trước kia mua vé của một số đại lý giá cao hơn nhiều so với Abay, mua vé ở Abay ...</span><br>
+                                    <p>Pham Van Dung - 090907496X</p>
+                                </div>
+                            </div>
+                            <div class="comment d-flex" style="padding-bottom: 10px;">
+                                <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                    <span>Mình thường phải đi công tác Hà Nội - Sai Gòn nhiều, trước kia mua vé của một số đại lý giá cao hơn nhiều so với Abay, mua vé ở Abay ...</span><br>
+                                    <p>Pham Van Dung - 090907496X</p>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="col-md-6">
+                        <div style="background-color: #e1e1e1;">
+                            <h4>Câu hỏi thường gặp</h4>
+                            <a href="" class="ml-2">Giá vé máy bay của trẻ em được tính như thế nào?</a><br>
+                            <a href="" class="ml-2">Tôi bị mất chứng minh thư thì có được bay không ?</a><br>
+                            <a href="" class="ml-2">Tôi có mang theo thịt tươi sống và hải sản theo hành lý lên máy bay?</a><br>
+                            <a href="" class="ml-2">Khi đi máy bay tôi được mang theo bao nhiêu kg hành lý xách tay?</a><br>
+                            <a href="" class="ml-2">Em bé bao nhiêu tuổi thì được đi máy bay? Và cần những giấy tờ gì?</a><br>
+                            <a href="" class="ml-2">Làm thế nào để tôi tìm được vé máy bay giá rẻ nhất?</a><br>
+                            <a href="" class="ml-2">Khi đi máy bay tôi có được mang theo rượu và nước mắm không?</a><br>
+                            <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                            <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                            <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                            <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                            <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- FOOTER -->
     <div id="wp-footer">
         <div class="container">

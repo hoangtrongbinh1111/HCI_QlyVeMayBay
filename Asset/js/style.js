@@ -214,4 +214,3 @@ function selectFlight(fl) {
         }
     }
 }
-// show info

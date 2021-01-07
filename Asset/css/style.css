@@ -736,28 +736,36 @@ td>a {
 
 /* -------------------Thông tin hiện ẩn------------------ */
 
-@keyframes showhide_info {
+@keyframes pause-between-iterations {
+    /* Other animation is visible for 25% of the time */
     0% {
         opacity: 0;
     }
     25% {
-        opacity: 0.25;
+        opacity: 0;
     }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 0.75;
+    /* Other animation is hidden for 75% of the time */
+    25.1% {
+        opacity: 1;
     }
     100% {
         opacity: 1;
     }
 }
 
-#new-book-1 {
-    animation: showhide_info 2s;
+@keyframes showhide_info {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-#new-book-2 {
-    animation: showhide_info 2s;
+#new_guest {
+    animation: showhide_info 2s infinite, pause-between-iterations 6s infinite;
+    /* animation-delay: 5s;
+    animation-name: showhide_info;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; */
 }
